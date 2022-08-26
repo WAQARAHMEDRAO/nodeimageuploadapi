@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "hbs");
 require("./server/database/database");
 
-app.use("/", require("./server/router/router"));
+app.get("/", require("./server/router/router"));
 app.listen(port, () => {
   console.log(`APP IS LIXENING ON THE PORT ${port}`);
 });
